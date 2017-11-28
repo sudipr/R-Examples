@@ -22,5 +22,25 @@ sapply(list,mean)
 class(sapply(list,sum))
 
 
+#tapply
+age<-c(24,24,25,27,29)
+gender<-c('m','f','m','m','m')
+fac_gender<-factor(gender)
+fac_gender
+
+tapply(age,fac_gender,mean)
+
+#vapply specify the return type
+list<-list(a=c(1,2),b=c(2,3),c=c(3,3))
+list
+
+vapply(list,mean,FUN.VALUE = double(1))
+
+#mapply
+list<-list(rep(1,4),rep(2,3),rep(3,2),rep(4,1))
+list
+
+mapply(rep,1:4,4:1)
+
 
 
